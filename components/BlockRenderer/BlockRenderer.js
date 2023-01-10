@@ -1,4 +1,4 @@
-import { Cover } from "./Cover";
+import { Cover } from "components/Cover";
 
 export const BlockRenderer = ({blocks}) => {
     return blocks?.map(block => {
