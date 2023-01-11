@@ -5,7 +5,9 @@ import { cleanAndTransformBlocks } from "utils/cleanAndTransformBlocks";
 
 export default function Home(props) {
   console.log("props", props);
-  return <div><BlockRenderer blocks={props.blocks}/></div>;
+  return <div>
+          <BlockRenderer blocks={props.blocks}/>
+          </div>;
 }
 
 export const getStaticProps = async () => {
