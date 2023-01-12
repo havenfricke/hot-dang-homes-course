@@ -22,8 +22,8 @@ export const getStaticProps = async () => {
         }
       }
     }
-    `
-  })
+    `,
+  });
   const blocks = cleanAndTransformBlocks(data.nodeByUri.blocksJSON);
   return {
    
@@ -31,6 +31,6 @@ export const getStaticProps = async () => {
       blocks,
       myexampleprop: "test", 
       
-    }
-  }
-}
+    },
+  };
+};
