@@ -9,15 +9,15 @@ export const BlockRenderer = ({blocks}) => {
         switch(block.name){
             case 'core/paragraph': {
                 return <Paragraph 
-                    key={block.id} 
-                    textAlign={block.attributes.align}
-                    content={block.attributes.content}
-                    textColor={
-                        theme[block.attributes.textColor] || 
-                        block.attributes.style?.color?.text
-                    }
-                    />          
-        }
+                        key={block.id} 
+                        textAlign={block.attributes.align}
+                        content={block.attributes.content}
+                        textColor={
+                            theme[block.attributes.textColor] || 
+                            block.attributes.style?.color?.text
+                        }
+                        />          
+            }
             case 'core/heading': {
                 console.log("BLOCK: ", block);
                 return <Heading 
