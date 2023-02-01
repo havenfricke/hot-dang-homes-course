@@ -12,7 +12,7 @@ export const MainMenu = ({items, callToActionLabel, callToActionDestination}) =>
             </div>
             <div className="flex flex-1 justify-end">
 
-                {( items || []).map(item => (
+                {( items || [] ).map(item => (
                     <div 
                     key={item.id} 
                     className="hover:bg-slate-700 cursor-pointer relative group">
@@ -26,7 +26,7 @@ export const MainMenu = ({items, callToActionLabel, callToActionDestination}) =>
                         {!!item.subMenuItems?.length &&
                             <div className="group-hover:block hidden bg-slate-800 text-left absolute right-0 top-full -mt-3">
                                 {item.subMenuItems.map(subMenuItem => (
-                                    <Link key={subMenuItem.id} href={subMenuItem.destination}>
+                                    <Link key={subMenuItem.id} href={subMenuItem.destination.uri}>
                                         <a className="block whitespace-nowrap p-5 hover:bg-slate-700">
                                             {subMenuItem.label}
                                         </a>
