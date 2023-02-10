@@ -1,4 +1,6 @@
 import { CallToActionButton } from "components/CallToActionButton";
+import { Column } from "components/Column";
+import { Columns } from "components/Columns";
 import { Cover } from "components/Cover";
 import { Heading } from "components/Heading";
 import { Paragraph } from "components/Paragraph";
@@ -33,6 +35,18 @@ export const BlockRenderer = ({blocks}) => {
                             content={block.attributes.content}
                             textAlign={block.attributes.textAlign} 
                             />
+            }
+            case "core/columns" : {
+                return (
+                <Columns 
+                key={block.id} 
+                isStackedOnMobile={block.attributes.isStackedOnMobile}>
+                    <BlockRenderer blocks={block.innerBlocks} />
+                </Columns>
+                );
+            }
+            case "core/column" : {
+                return <Column />
             }
             case 'core/cover': {
                 console.log("BLOCK: ", block)
